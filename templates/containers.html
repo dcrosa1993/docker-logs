@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contenedores</title>
+</head>
+<body>
+    <h1>Contenedores Docker</h1>
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+    <ul>
+        {% for name, status in containers %}
+        <li>
+            <a href="{{ url_for('show_logs', container_name=name) }}">{{ name }}</a>
+            <span>({{ status }})</span>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

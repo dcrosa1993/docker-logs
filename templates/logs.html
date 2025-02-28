@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logs de {{ container_name }}</title>
+</head>
+<body>
+    <h1>Logs de {{ container_name }}</h1>
+    <a href="{{ url_for('list_containers') }}">Volver</a>
+    <pre>{{ logs }}</pre>
+</body>
+</html>
